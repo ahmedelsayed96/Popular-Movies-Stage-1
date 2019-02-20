@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:id="@+id/activity_details"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:background="@color/colorPrimary"
+                                                 tools:context="com.example.mido.moviesapp.Home.Details">
+
+    <ImageView
+        android:id="@+id/mainImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="movieImage"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryTransparent"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="100dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4d000000"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/movieName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:padding="10dp"
+                        android:textColor="#fff"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:transitionName="name"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal">
+
+                        <RatingBar
+                            android:id="@+id/movieRate"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="true"
+                            android:max="6"
+                            android:numStars="6"
+                            android:rating="6"
+                            android:stepSize="1.0"/>
+
+                        <TextView
+                            android:id="@+id/rateText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#fff"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/rateVoted"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="#fff"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="2"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/genre_text"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/genre"
+                    android:textColor="#cccbcb"
+                    android:textSize="12sp"/>
+
+                <TextView
+
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/adult"
+                    android:textColor="#cccbcb"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/Genre"
+                    android:layout_gravity="fill"
+                    android:width="0dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/Adult"
+
+                    android:layout_gravity="fill"
+                    android:width="0dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="15sp"/>
+
+                <TextView
+
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/date_release"
+                    android:textColor="#cccbcb"
+                    android:textSize="12sp"/>
+
+                <TextView
+
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/status"
+                    android:textColor="#cccbcb"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/ReleaseDate"
+
+                    android:layout_gravity="fill"
+                    android:width="0dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="15sp"/>
+
+
+                <TextView
+                    android:id="@+id/Status"
+
+                    android:layout_gravity="fill"
+                    android:width="0dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="15sp"/>
+
+                <TextView
+
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/budget"
+                    android:textAllCaps="true"
+                    android:textColor="#cccbcb"
+                    android:textSize="12sp"/>
+
+                <TextView
+
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/runtime"
+                    android:textAllCaps="true"
+                    android:textColor="#cccbcb"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/Budget"
+
+                    android:layout_gravity="fill"
+                    android:width="0dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/Runtime"
+
+                    android:layout_gravity="fill"
+                    android:width="0dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="15sp"/>
+
+                <TextView
+
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/original_language"
+                    android:textAllCaps="true"
+                    android:textColor="#cccbcb"
+                    android:textSize="12sp"/>
+
+                <TextView
+
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/homepage"
+                    android:textAllCaps="true"
+                    android:textColor="#cccbcb"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/OriginalLanguage"
+
+                    android:layout_gravity="fill"
+                    android:width="0dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="15sp"/>
+
+
+                <TextView
+                    android:id="@+id/Homepage"
+
+                    android:layout_gravity="fill"
+                    android:width="0dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_columnSpan="2"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/overview"
+                    android:textAllCaps="true"
+                    android:textColor="#cccbcb"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/Overview"
+                    android:layout_columnSpan="2"
+                    android:textColor="#fff"
+                    android:textSize="15sp"/>
+
+
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/cast"
+                android:textColor="#cccbcb"
+                android:textSize="12sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Cast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
